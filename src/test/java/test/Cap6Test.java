@@ -19,7 +19,7 @@ public class Cap6Test {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Cap6Mainconfig.class);
         System.out.println("IOC容器创建完成");
 
-        Object o = context.getBean("myFactoryBean");
+        Object o = context.getBean("&myFactoryBean");
         System.out.println("BeanFactory注册的bean："+o.getClass());
 
         String[] names = context.getBeanDefinitionNames();
