@@ -1,0 +1,12 @@
+Spring的自動裝配的优先级：
+
+    @Autowired默认按照类型进行注入，如果找不到就会按照名称进行注入
+
+    @Inject 用法和@Autowired一样 只不过一个是spring的注解  一个是JSR330的规范，两者都是按照类型注入的，如果要转换成按照名称注入@Autowired需要通过 @Qualifier注解指定注入的名称，@Inject需要通过@Named指定注入的名称。
+
+    @resource 默认按照名称进行注解（一般都会通过name属性指定名称），如果找不到则会按照类型进行注入，如果@resource注解和 @Qualifier注解同时使用时，会先按照@resource进行注入，如果找不到则会按照 @Qualifier进行注入，如果再找不到就会抛出异常，而不会转换成类型注入。
+
+    @Qualifier当容器中有多个类型相同的bean实例时，可以通过@Qualifier声明具体注入的是哪一个
+
+    @Primary在有多个相同的bean时通过该注解指定bean的优先级即带有@Primary注解的bean会被优先注入
+

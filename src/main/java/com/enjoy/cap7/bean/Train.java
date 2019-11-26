@@ -27,4 +27,5 @@ public class Train implements InitializingBean,DisposableBean {
     public void afterPropertiesSet() throws Exception {
         System.out.println("train.......afterPropertiseSet.......");
     }
+
 }

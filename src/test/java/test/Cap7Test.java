@@ -1,5 +1,6 @@
 package test;
 
+import com.enjoy.cap7.bean.Plane;
 import com.enjoy.cap7.config.Cap7MainConfigOfLifecycle;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -27,9 +28,16 @@ public class Cap7Test {
          * IOC容器不会自动创建对象实例。
          * 容器销毁时也不会销毁实例？
          */
-        //Object bike = context.getBean("bike");
+        Plane plane = (Plane) context.getBean("plane");
+        plane.test();
 
         context.close();
+    }
+
+    @Test
+    public void test1(){
+        Plane p = new Plane();
+        p.test();
     }
 
 }

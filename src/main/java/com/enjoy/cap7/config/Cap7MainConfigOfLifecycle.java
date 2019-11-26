@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Scope;
  *      1、@Bean中的initMethod/destoryMethod属性指定对应方法 （正规方式）
  *      2、通过实现接口InitializingBean,DisposableBean实现抽象方法实现
  *      3、通过jsr250规范的@PostConstruct、@PreDestroy注解实现
+ *      4、实现BeanPostProcessor接口
  *
  * @Date 2019/11/21 9:56
  * @Authod ZG
