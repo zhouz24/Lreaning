@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Primary;
  * @Version 1.0
  */
 @Configuration
-@ComponentScan({"com.enjoy.cap9.controller","com.enjoy.cap9.service","com.enjoy.cap9.dao"})
+@ComponentScan({"com.enjoy.cap9"})
 public class Cap9MainConfig {
 
     @Primary

@@ -22,11 +22,11 @@ public class Cap9Test {
        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Cap9MainConfig.class);
         System.out.println("IOC容器创建完毕");
 
-        TestService testService = context.getBean(TestService.class);
+        /*TestService testService = context.getBean(TestService.class);
         testService.printDao();
         // 直接从容器中去和使用@Autowired注解取值相同
         TestDao testDao = context.getBean(TestDao.class);
-        System.out.println(testDao);
+        System.out.println(testDao);*/
 
         context.close();
 
